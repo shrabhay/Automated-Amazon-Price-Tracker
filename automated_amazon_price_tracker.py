@@ -22,15 +22,15 @@ def connect_to_email_account():
     connection = smtplib.SMTP(host='smtp.gmail.com')
     connection.starttls()
     connection.login(
-        user='abhay.shrawankar@gmail.com',
-        password='soro yngk qmzj hxgm'
+        user='<YOUR_EMAIL_ADDRESS>',
+        password='<YOUR_EMAIL_PASSWORD>'
     )
     return connection
 
 
 def send_price_alert(actual_price, product_title):
-    sender_email = 'abhay.shrawankar@gmail.com'
-    recipient_emails = 'abhay.shrawankar@gmail.com'
+    sender_email = '<SENDER EMAIL'
+    recipient_emails = '<RECEIVER EMAIL'
 
     subject = 'Amazon Price Alert'
     message = f'{product_title} is now ₹{actual_price}. Buy Now!!\n{LIVE_URL}'
